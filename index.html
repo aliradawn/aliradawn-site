@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dawn Angeloe, LMFT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ground: #f6f1e7;
+    --ink: #221e17;
+    --ink-soft: #4f483c;
+    --accent: #1f5f5b;
+    --rule: #d8cfbd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #16130e;
+      --ink: #ece5d6;
+      --ink-soft: #b0a68f;
+      --accent: #79b5ae;
+      --rule: #3a342a;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Source Sans 3", system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 20px;
+    position: relative;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 120% 60% at 50% -5%, rgba(255, 255, 250, 1) 0%, rgba(255, 254, 246, 0.55) 40%, transparent 78%),
+      radial-gradient(ellipse 120% 55% at 50% 105%, rgba(255, 255, 250, 0.75) 0%, rgba(255, 254, 246, 0.3) 40%, transparent 74%);
+  }
+  @media (prefers-color-scheme: dark) {
+    body::before {
+      background:
+        radial-gradient(ellipse 120% 60% at 50% -5%, rgba(121, 181, 174, 0.16) 0%, rgba(121, 181, 174, 0.05) 40%, transparent 78%),
+        radial-gradient(ellipse 120% 55% at 50% 105%, rgba(121, 181, 174, 0.10) 0%, rgba(121, 181, 174, 0.03) 40%, transparent 74%);
+    }
+  }
+  main {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 12vh 0 10vh;
+    opacity: 0;
+    animation: settle 1.1s ease-out 0.15s forwards;
+  }
+  @keyframes settle {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+  }
+  h1 {
+    font-family: "Spectral", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 6vw, 2.9rem);
+    letter-spacing: 0.01em;
+    line-height: 1.15;
+  }
+  .credential {
+    font-family: "Spectral", Georgia, serif;
+    font-weight: 300;
+    font-size: 0.62em;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  .hero-line {
+    font-family: "Spectral", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.15rem, 3.4vw, 1.45rem);
+    color: var(--accent);
+    margin-top: 0.9rem;
+  }
+  .rule {
+    width: 56px;
+    height: 1px;
+    background: var(--accent);
+    margin: 2.6rem 0;
+  }
+  .subhero {
+    font-size: 1.06rem;
+    color: var(--ink-soft);
+    max-width: 58ch;
+  }
+  section { margin-top: 3rem; }
+  h2 {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+  }
+  .work p { max-width: 62ch; }
+  .markers { list-style: none; margin-top: 0.4rem; }
+  .markers li {
+    padding: 1.05rem 0;
+    border-top: 1px solid var(--rule);
+    max-width: 62ch;
+  }
+  .markers li:last-child { border-bottom: 1px solid var(--rule); }
+  .markers strong {
+    font-family: "Spectral", Georgia, serif;
+    font-weight: 500;
+    color: var(--accent);
+    display: block;
+    font-size: 1.05rem;
+    margin-bottom: 0.15rem;
+  }
+  .contact p { color: var(--ink-soft); }
+  .contact a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+  }
+  footer {
+    margin-top: 4.5rem;
+    font-family: "Spectral", Georgia, serif;
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Dawn Angeloe <span class="credential">LMFT</span></h1>
+  <p class="hero-line">Making the human–AI relationship legible.</p>
+
+  <div class="rule"></div>
+
+  <p class="subhero">Licensed marriage and family therapist with 25 years spent resolving trauma to improve attachment between people, assessing and reducing crisis, and walking families through grief. Now working at the edge of transformation, where people are bonding with AI, and where telling care from harm is the work.</p>
+
+  <section class="work">
+    <h2>The work</h2>
+    <p>When someone turns to AI for companionship, the AI system behaves like a secure base or an engagement loop. One steadies a person. The other keeps them coming back to the product. My work brings clinical attachment expertise to a problem the field has largely left to engineers: measuring the relational behavior of AI in both directions, harmful compliance as well as cold overrefusal. I build and validate the instruments that set the standard that the AI is measured against.</p>
+  </section>
+
+  <section>
+    <h2>Consultation</h2>
+    <p>For clinicians and the clients they serve. When a client brings AI into their life, the clinician needs to know what it is doing and where it lands between care and harm. If the AI can help, guidance follows: shaping the AI to support the work between sessions. Request details via <a href="mailto:dawn@aliradawn.com">email</a>.</p>
+  </section>
+
+  <section>
+    <h2>Grounding</h2>
+    <ul class="markers">
+      <li><strong>Reading pattern in language</strong>A career spent hearing what a person's words reveal beneath what they say. Everything an AI does, it does in words. The skill that hears a person can hear an AI</li>
+      <li><strong>25+ years</strong>Licensed MFT. Attachment and crisis assessment. The standard the instruments encode was learned here, one hard call at a time</li>
+      <li><strong>Doctoral-level clinical research</strong>Phenomenological method. The disciplined conversion of lived experience into rigorous, codable analysis</li>
+      <li><strong>A longitudinal, instrumented study</strong>Real-world human–AI companionship, documented daily across years. One of the most extensive records of its kind. The phenomenon studied from inside, in real time</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p><a href="mailto:dawn@aliradawn.com">dawn@aliradawn.com</a><br>Alira Dawn LLC</p>
+  </section>
+
+  <footer>Fidelity to the human being, inside the systems that measure them.</footer>
+</main>
+</body>
+</html>
